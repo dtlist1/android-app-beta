@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">boycott</string>
+    <string name="app_name">Trump List</string>
+    <string name="server">http://52.26.7.74/quizontap/</string>
+
+    <!-- geofencing stuff -->
+    <string name="geofence_transition_type_enter">ENTER</string>
+    <string name="geofence_transition_type_exit">EXIT</string>
+    <string name="location_default_lat">30.915208816528</string>
+    <string name="location_default_lon">-88.277397155762</string>
+    <string name="zipcode_gmap_api_address">http://maps.googleapis.com/maps/api/geocode/json</string>
+
+
+    <string name="notification_content_title">Trump List</string>
+    <string name="notification_content_text">You\'re close to a store that supports Trump</string>
 </resources>
