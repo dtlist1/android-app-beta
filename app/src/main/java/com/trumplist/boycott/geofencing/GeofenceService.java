@@ -209,15 +209,16 @@ public class GeofenceService extends Service implements
     public void onNotification(final List<GeofenceData> triggeredAreas) {
         if (triggeredAreas.isEmpty()) return;
         final int companyId = triggeredAreas.get(0).getCompanyId();
+        final String companyName = triggeredAreas.get(0).getCOMPNAME();
         Utils.executeOnMainThread(new Runnable() {
             @Override
             public void run() {
-                updateNotification(companyId);
+                updateNotification(companyId, companyName);
             }
         });
     }
 
-    public void updateNotification(int companyId){
+    public void updateNotification(int companyId, String companyName){
         //TODO: Needs new incoming intent
         Intent compGEOIntent = new Intent(this, DrillDownActivty.class);
         Log.i(LOG_TAG, "QuizID: " + companyId);
@@ -225,13 +226,14 @@ public class GeofenceService extends Service implements
         compGEOIntent.putExtra("company", companyId);
         compGEOIntent.putExtra("source", "GEO");
 
+        Log.i(LOG_TAG, companyName+ " -" + companyId);
 
         PendingIntent pIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(),
                 compGEOIntent, 0);
 
         Notification n = new Notification.Builder(this)
                 .setContentTitle(getString(R.string.notification_content_title))
-                .setContentText(getString(R.string.notification_content_text))
+                .setContentText(getString(R.string.notification_content_text) +" "+ companyName +".  They Support Trump!")
                 .setContentIntent(pIntent)
                 .setAutoCancel(false)
                 .setSmallIcon(R.drawable.ic_speaker_dark)

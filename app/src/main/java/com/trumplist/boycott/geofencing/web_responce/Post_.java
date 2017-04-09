@@ -20,7 +20,7 @@ public class Post_ {
     @Expose
     private Integer companyID;
 
-    @SerializedName("COMP_NAME")
+    @SerializedName("COMPANY")
     @Expose
     private String COMPNAME;
     /*

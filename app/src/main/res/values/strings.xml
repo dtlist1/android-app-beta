@@ -11,6 +11,6 @@
 
 
     <string name="notification_content_title">Trump List</string>
-    <string name="notification_content_text">You\'re close to a store that supports Trump</string>
+    <string name="notification_content_text">You\'re close to  </string>
     <string name="title_activity_drill_down_activty">DrillDownActivty</string>
 </resources>
