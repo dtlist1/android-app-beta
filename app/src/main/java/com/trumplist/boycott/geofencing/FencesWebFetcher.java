@@ -91,9 +91,9 @@ public class FencesWebFetcher {
         String baseUrl = context.getResources().getString(R.string.server);
         String url = baseUrl + "geoFenceAndroid.php";
 
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
+       // SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         //String userID = sp.getString("USERID", "");
-        String firebaseID = sp.getString("Firebase", "");
+        String firebaseID = "testMcTesterson";
         /** values from a doc - not sure web server work with my current coordinates */
         String lat = String.valueOf(latitude);
         String lon = String.valueOf(longitude);

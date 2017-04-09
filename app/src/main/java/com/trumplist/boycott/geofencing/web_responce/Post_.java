@@ -9,48 +9,66 @@ import javax.annotation.Generated;
 @Generated("org.jsonschema2pojo")
 public class Post_ {
 
-    @SerializedName("idquizontap_geoFencedquiz")
+    @SerializedName("LOCATION_ID")
     @Expose
-    private Integer idquizontapGeoFencedquiz;
-    @SerializedName("quizontap_quiz_id")
+    private Integer locationID;
+
+    /*@SerializedName("quizontap_quiz_id")
     @Expose
-    private Integer quizontapQuizId;
-    @SerializedName("quizontap_customer_id")
+    private Integer quizontapQuizId;*/
+    @SerializedName("COMP_NUM")
     @Expose
-    private Integer quizontapCustomerId;
-    @SerializedName("LOC_NAME")
+    private Integer companyID;
+
+    @SerializedName("COMP_NAME")
     @Expose
-    private String LOCNAME;
+    private String COMPNAME;
+    /*
     @SerializedName("FULL_ADDRESS")
     @Expose
     private String FULLADDRESS;
-    @SerializedName("ADDRESS")
+    */
+
+    @SerializedName("ADDRESS_1")
     @Expose
-    private Object ADDRESS;
+    private Object ADDRESS_1;
+
+    @SerializedName("ADDRESS_2")
+    @Expose
+    private Object ADDRESS_2;
+
     @SerializedName("CITY")
     @Expose
     private String CITY;
+
     @SerializedName("STATE")
     @Expose
     private String STATE;
     @SerializedName("ZIP")
     @Expose
     private Object ZIP;
+    /*
     @SerializedName("PHONE")
     @Expose
     private Object PHONE;
+  */
+
     @SerializedName("LAT")
     @Expose
     private Double LAT;
-    @SerializedName("LNG")
+
+    @SerializedName("LONG")
     @Expose
     private Double LNG;
+
     @SerializedName("RADIUS")
     @Expose
     private Integer RADIUS;
-    @SerializedName("GEO_FENCE_NOTIFICATION")
+
+    /*@SerializedName("GEO_FENCE_NOTIFICATION")
     @Expose
     private String GEOFENCENOTIFICATION;
+
     @SerializedName("DWELL_TIME_MIN")
     @Expose
     private Object DWELLTIMEMIN;
@@ -59,7 +77,8 @@ public class Post_ {
     private String CREATEDATETIME;
     @SerializedName("UPDATE_DATETIME")
     @Expose
-    private String UPDATEDATETIME;
+    private String UPDATEDATETIME;*/
+
     @SerializedName("ACTIVE_FLAG")
     @Expose
     private Integer ACTIVEFLAG;
@@ -69,53 +88,35 @@ public class Post_ {
      * @return
      *     The idquizontapGeoFencedquiz
      */
-    public Integer getIdquizontapGeoFencedquiz() {
-        return idquizontapGeoFencedquiz;
+    public Integer getId() {
+        return locationID;
     }
 
     /**
      * 
-     * @param idquizontapGeoFencedquiz
-     *     The idquizontap_geoFencedquiz
+     * @param locationID
+     *     The locationID
      */
-    public void setIdquizontapGeoFencedquiz(Integer idquizontapGeoFencedquiz) {
-        this.idquizontapGeoFencedquiz = idquizontapGeoFencedquiz;
-    }
-
-    /**
-     * 
-     * @return
-     *     The quizontapQuizId
-     */
-    public Integer getQuizontapQuizId() {
-        return quizontapQuizId;
-    }
-
-    /**
-     * 
-     * @param quizontapQuizId
-     *     The quizontap_quiz_id
-     */
-    public void setQuizontapQuizId(Integer quizontapQuizId) {
-        this.quizontapQuizId = quizontapQuizId;
+    public void setId(Integer locationID) {
+        this.locationID = locationID;
     }
 
     /**
      * 
      * @return
-     *     The quizontapCustomerId
+     *     The companyID
      */
-    public Integer getQuizontapCustomerId() {
-        return quizontapCustomerId;
+    public Integer getCompanyID() {
+        return companyID;
     }
 
     /**
      * 
-     * @param quizontapCustomerId
-     *     The quizontap_customer_id
+     * @param companyID
+     *     The companyID
      */
-    public void setQuizontapCustomerId(Integer quizontapCustomerId) {
-        this.quizontapCustomerId = quizontapCustomerId;
+    public void setCompanyID(Integer companyID) {
+        this.companyID = companyID;
     }
 
     /**
@@ -123,8 +124,8 @@ public class Post_ {
      * @return
      *     The LOCNAME
      */
-    public String getLOCNAME() {
-        return LOCNAME;
+    public String getCOMPNAME() {
+        return COMPNAME;
     }
 
     /**
@@ -132,44 +133,44 @@ public class Post_ {
      * @param LOCNAME
      *     The LOC_NAME
      */
-    public void setLOCNAME(String LOCNAME) {
-        this.LOCNAME = LOCNAME;
+    public void setCOMPNAME(String LOCNAME) {
+        this.COMPNAME = COMPNAME;
     }
 
     /**
-     * 
+     *
      * @return
-     *     The FULLADDRESS
-     */
-    public String getFULLADDRESS() {
-        return FULLADDRESS;
-    }
-
-    /**
-     * 
-     * @param FULLADDRESS
-     *     The FULL_ADDRESS
-     */
-    public void setFULLADDRESS(String FULLADDRESS) {
-        this.FULLADDRESS = FULLADDRESS;
-    }
-
-    /**
-     * 
-     * @return
-     *     The ADDRESS
+     *     The ADDRESS_1
      */
     public Object getADDRESS() {
-        return ADDRESS;
+        return ADDRESS_1;
     }
 
     /**
      * 
-     * @param ADDRESS
-     *     The ADDRESS
+     * @param ADDRESS_1
+     *     The ADDRESS_1
      */
-    public void setADDRESS(Object ADDRESS) {
-        this.ADDRESS = ADDRESS;
+    public void setADDRESS_1 (Object ADDRESS) {
+        this.ADDRESS_1 = ADDRESS_1;
+    }
+
+    /**
+     *
+     * @return
+     *     The ADDRESS_1
+     */
+    public Object getADDRESS_2() {
+        return ADDRESS_2;
+    }
+
+    /**
+     *
+     * @param ADDRESS_2
+     *     The ADDRESS_2
+     */
+    public void setADDRESS_2 (Object ADDRESS) {
+        this.ADDRESS_2 = ADDRESS_2;
     }
 
     /**
@@ -229,24 +230,6 @@ public class Post_ {
     /**
      * 
      * @return
-     *     The PHONE
-     */
-    public Object getPHONE() {
-        return PHONE;
-    }
-
-    /**
-     * 
-     * @param PHONE
-     *     The PHONE
-     */
-    public void setPHONE(Object PHONE) {
-        this.PHONE = PHONE;
-    }
-
-    /**
-     * 
-     * @return
      *     The LAT
      */
     public Double getLAT() {
@@ -298,77 +281,6 @@ public class Post_ {
         this.RADIUS = RADIUS;
     }
 
-    /**
-     * 
-     * @return
-     *     The GEOFENCENOTIFICATION
-     */
-    public String getGEOFENCENOTIFICATION() {
-        return GEOFENCENOTIFICATION;
-    }
-
-    /**
-     * 
-     * @param GEOFENCENOTIFICATION
-     *     The GEO_FENCE_NOTIFICATION
-     */
-    public void setGEOFENCENOTIFICATION(String GEOFENCENOTIFICATION) {
-        this.GEOFENCENOTIFICATION = GEOFENCENOTIFICATION;
-    }
-
-    /**
-     * 
-     * @return
-     *     The DWELLTIMEMIN
-     */
-    public Object getDWELLTIMEMIN() {
-        return DWELLTIMEMIN;
-    }
-
-    /**
-     * 
-     * @param DWELLTIMEMIN
-     *     The DWELL_TIME_MIN
-     */
-    public void setDWELLTIMEMIN(Object DWELLTIMEMIN) {
-        this.DWELLTIMEMIN = DWELLTIMEMIN;
-    }
-
-    /**
-     * 
-     * @return
-     *     The CREATEDATETIME
-     */
-    public String getCREATEDATETIME() {
-        return CREATEDATETIME;
-    }
-
-    /**
-     * 
-     * @param CREATEDATETIME
-     *     The CREATE_DATETIME
-     */
-    public void setCREATEDATETIME(String CREATEDATETIME) {
-        this.CREATEDATETIME = CREATEDATETIME;
-    }
-
-    /**
-     * 
-     * @return
-     *     The UPDATEDATETIME
-     */
-    public String getUPDATEDATETIME() {
-        return UPDATEDATETIME;
-    }
-
-    /**
-     * 
-     * @param UPDATEDATETIME
-     *     The UPDATE_DATETIME
-     */
-    public void setUPDATEDATETIME(String UPDATEDATETIME) {
-        this.UPDATEDATETIME = UPDATEDATETIME;
-    }
 
     /**
      * 

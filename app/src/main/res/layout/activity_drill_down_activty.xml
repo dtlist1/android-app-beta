@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.trumplist.boycott.DrillDownActivty"
+    android:scrollIndicators="right">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/companyname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="Test Company Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textSize="30sp" />
+
+
+    <TextView
+        android:id="@+id/companywhy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_margin="10dp"
+        android:text="Test Company Why"/>
+
+    <TextView
+        android:id="@+id/webContactText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_margin="10dp"
+        android:text="Web Contacts"/>
+
+    <ListView
+        android:id="@+id/webList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:stackFromBottom="true"
+        android:dividerHeight="1dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:minHeight="5dp"
+        />
+
+    <TextView
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_margin="10dp"
+        android:text="Emails"/>
+
+    <ListView
+        android:id="@+id/emailList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:stackFromBottom="true"
+        android:dividerHeight="1dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:minHeight="5dp"
+        />
+
+    <TextView
+        android:id="@+id/phoneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_margin="10dp"
+        android:text="Phone Numbers"/>
+
+    <ListView
+        android:id="@+id/phoneList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:stackFromBottom="true"
+        android:dividerHeight="1dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:minHeight="5dp"
+        />
+
+    <!--<android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+</LinearLayout>

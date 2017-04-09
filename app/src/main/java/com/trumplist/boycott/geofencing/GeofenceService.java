@@ -17,6 +17,8 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 
 
+import com.trumplist.boycott.DrillDownActivty;
+import com.trumplist.boycott.MainActivity;
 import com.trumplist.boycott.R;
 import com.trumplist.boycott.geofencing.utils.Utils;
 import com.google.android.gms.common.ConnectionResult;
@@ -206,37 +208,38 @@ public class GeofenceService extends Service implements
     @Override
     public void onNotification(final List<GeofenceData> triggeredAreas) {
         if (triggeredAreas.isEmpty()) return;
-        final int quizOnTapQuizId = triggeredAreas.get(0).getQuizOnTapQuizId();
+        final int companyId = triggeredAreas.get(0).getCompanyId();
         Utils.executeOnMainThread(new Runnable() {
             @Override
             public void run() {
-                updateNotification(quizOnTapQuizId);
+                updateNotification(companyId);
             }
         });
     }
 
-    public void updateNotification(int quizOnTapQuizId){
+    public void updateNotification(int companyId){
         //TODO: Needs new incoming intent
-        /*Intent quizoutIntent = new Intent(this, QuestionActivity.class);
-        Log.i(LOG_TAG, "QuizID: " + quizOnTapQuizId);
-        quizoutIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        quizoutIntent.putExtra("company", quizOnTapQuizId);
-        quizoutIntent.putExtra("source", "GEO");
-        quizoutIntent.putExtra("tab", 0);
+        Intent compGEOIntent = new Intent(this, DrillDownActivty.class);
+        Log.i(LOG_TAG, "QuizID: " + companyId);
+        compGEOIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        compGEOIntent.putExtra("company", companyId);
+        compGEOIntent.putExtra("source", "GEO");
+
 
         PendingIntent pIntent = PendingIntent.getActivity(this, (int) System.currentTimeMillis(),
-                quizoutIntent, 0);
+                compGEOIntent, 0);
 
         Notification n = new Notification.Builder(this)
                 .setContentTitle(getString(R.string.notification_content_title))
                 .setContentText(getString(R.string.notification_content_text))
                 .setContentIntent(pIntent)
                 .setAutoCancel(false)
-                .setSmallIcon(R.drawable.quizontap_notify)
+                .setSmallIcon(R.drawable.ic_speaker_dark)
                 .build();
+
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        notificationManager.notify(0, n);*/
+        notificationManager.notify(0, n);
     }
     /**
      * Geofencing manager call that callback when user leaves validity area (created on startup from

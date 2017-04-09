@@ -12,14 +12,14 @@ public class GeofenceData {
         d.setRadius(geoFence.getRADIUS());
         LatLng loc = new LatLng(geoFence.getLAT(), geoFence.getLNG());
         d.setCoords(loc);
-        d.setPlaceName(geoFence.getLOCNAME());
-        d.setQuizOnTapQuizId(geoFence.getQuizontapQuizId());
+        d.setCOMPNAME(geoFence.getCOMPNAME());
+        d.setCompanyID(geoFence.getCompanyID());
         String zip = "";
         try {
             zip = (String) geoFence.getZIP();
         } catch (ClassCastException e){}
         d.setZip(zip);
-        d.setNotificationType(geoFence.getGEOFENCENOTIFICATION());
+       // d.setNotificationType(geoFence.getGEOFENCENOTIFICATION());
         return d;
     }
 
@@ -27,10 +27,10 @@ public class GeofenceData {
 
     private int radius;
     private LatLng coords;
-    String placeName;
+    String companyName;
     String zip;
-    String notificationType;
-    int quizOnTapQuizId;
+    //String notificationType;
+    int companyID;
     String uuid;
 
     public int getRadius() {
@@ -49,12 +49,12 @@ public class GeofenceData {
         this.coords = coords;
     }
 
-    public String getPlaceName() {
-        return placeName;
+    public String getCOMPNAME() {
+        return companyName;
     }
 
-    public void setPlaceName(String placeName) {
-        this.placeName = placeName;
+    public void setCOMPNAME(String companyName) {
+        this.companyName = companyName;
     }
 
     public String getZip() {
@@ -65,21 +65,21 @@ public class GeofenceData {
         this.zip = zip;
     }
 
-    public String getNotificationType() {
+  /*  public String getNotificationType() {
         return notificationType;
+    }*/
+
+    public int getCompanyId() {
+        return companyID;
     }
 
-    public int getQuizOnTapQuizId() {
-        return quizOnTapQuizId;
+    public void setCompanyID(int companyID) {
+        this.companyID = companyID;
     }
 
-    public void setQuizOnTapQuizId(int quizOnTapQuizId) {
-        this.quizOnTapQuizId = quizOnTapQuizId;
-    }
-
-    public void setNotificationType(String notificationType) {
+   /* public void setNotificationType(String notificationType) {
         this.notificationType = notificationType;
-    }
+    }*/
 
     public String getUuid() {
         return uuid;

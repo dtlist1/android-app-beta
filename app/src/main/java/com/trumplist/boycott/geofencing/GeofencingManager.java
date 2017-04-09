@@ -250,12 +250,12 @@ public class GeofencingManager {
      */
     private void scheduleBorderGeofence(final LatLng currentLocation){
         GeofenceData borderData = new GeofenceData();
-        borderData.setPlaceName("Border");
+        borderData.setCOMPNAME("Border");
         borderData.setCoords(currentLocation);
         borderData.setUuid(validityBorderGeofenceUUID);
         borderData.setRadius(validityGeofenceRadius);
 
-        borderData.setNotificationType(transitionTypeExit);
+        //borderData.setNotificationType(transitionTypeExit);
         Geofence border = createGeofenceFromGeofenceData(borderData);
         validityBorderGeofenceUUID = border.getRequestId();
         Log.i(LOG_TAG, "Border centered at: " + currentLocation.toString() +
@@ -309,13 +309,13 @@ public class GeofencingManager {
         geofenceData.setUuid(id);
 
         /** figure out transition type - string constants are in resources */
-        int transitionType = 0;
-        if (transitionTypeEnter.equals(geofenceData.getNotificationType())){
-            transitionType |= Geofence.GEOFENCE_TRANSITION_ENTER;
+        int transitionType = Geofence.GEOFENCE_TRANSITION_ENTER;
+       /* if (transitionTypeEnter.equals(geofenceData.getNotificationType())){
+            transitionType |=
         }
         if (transitionTypeExit.equals(geofenceData.getNotificationType())){
             transitionType |= Geofence.GEOFENCE_TRANSITION_EXIT;
-        }
+        }*/
 
         builder.setRequestId(id)
                 .setCircularRegion(place.latitude, place.longitude, radius)
